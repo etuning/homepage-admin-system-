@@ -1,0 +1,40 @@
+body#tomoko-wpj {
+	text-align:center;
+	width:100%;
+	margin:0px auto;
+	margin-top:0px;
+	background-image:url("../img/common/bg/body_bg.png");
+	background-repeat:repeat-x;
+}
+/** WrapperAREA **/
+#wrapper{
+    text-align:left;
+	height:1000px;/**仮**/
+	min-width:893px;
+	margin:0px auto;
+	width:1200px;
+	background-image:url("../img/common/bg/wrapper_bg.png");
+	background-repeat:no-repeat;
+}
+#wrapper #contents{
+	margin:0px auto;
+	width:893px;
+}
+#wrapper #contents #header{
+	background-image:url("../img/common/bg/header_menu.png");
+	background-repeat:no-repeat;
+	height:73px;
+}
+/** FooterArea **/
+#footer{
+	width:100%;
+	background-image:url("../img/common/bg/footer_bg.png");
+	height:300px;
+	background-color:#cdcdcd;
+	margin:0px auto;
+	mini-width:893px;
+}
+#footer #footer-contents{
+
+	width:893px;
+}

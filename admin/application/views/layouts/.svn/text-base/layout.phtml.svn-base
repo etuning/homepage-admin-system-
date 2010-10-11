@@ -1,0 +1,29 @@
+  <!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>ブンセキング INSTALLER</title>
+      <link rel="shortcut icon" href="<?php echo $this->img; ?>favicon.ico">
+      <link type="text/css" rel="stylesheet" href="<?php echo $this->link; ?>">
+    </head>
+    <body>
+        <div id="page">                      
+            <div id="header">
+                <div class="inner">                   
+                </div>
+            <div class="divider"></div>
+            </div>
+            <div id="central">
+                <div id="side_bar"><div class="inner"><?php  echo $this->layout()->sidebar ?></div></div>
+                <div id="content"><div class="inner"><?php  echo $this->layout()->content ?></div></div>
+                <div class="spacer"></div>
+            </div>
+            <div id="footer">
+                <div class="divider divider_bottom"></div>
+                <div class="inner"><?php   echo $this->layout()->footer ?></div>
+            </div>
+        </div>
+    </body>
+</html>

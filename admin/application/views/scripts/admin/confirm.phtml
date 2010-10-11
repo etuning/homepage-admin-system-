@@ -1,0 +1,38 @@
+insert
+フィールドを取得して、フォームを表示
+<form action="complete" method="post">
+        <?php
+            //echo var_dump($this->dataSource);
+            try
+            {           
+                $session = new Zend_Session_Namespace('my_session');
+                if(is_array($session->dbdata))
+                {
+                    foreach($session->dbdata as $key => $value)
+                    {
+//                        if($key == 0)
+//                            {
+                            foreach ($value as $key2=>$value2)
+                            {
+
+        //                        if(strpos($key2, "page_id"))
+        //                        {
+        //                            //echo $key2;
+        //                        }else{
+                                ?>
+                                <div><?php echo $value2;?></div>
+                                <?php
+        //                        }
+                            }
+                            echo '<div><input type="submit" value="COMFIRM"></div></div>';
+//                        }
+                    }
+                }
+            }
+            catch(Exception $e)
+            {
+                logModel::debug($e->getMessage());
+            }
+        ?>
+</form>
+<a href="/complete">完了</a>

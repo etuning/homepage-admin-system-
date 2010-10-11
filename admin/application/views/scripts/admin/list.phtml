@@ -1,0 +1,62 @@
+<div class="masonry_wrap">
+<?php
+    $session = new Zend_Session_Namespace('my_session');
+    echo '<div>'.$session->table_type.'</div>';
+    if(is_array($this->dataSource)){
+        if($session->edit_target == 'page')
+        {
+
+            foreach ($this->dataSource as $key => $value)
+            {
+                echo '<div class="masonry_box">';
+                foreach ($value as $key2=>$value2)
+                {
+                    if(strpos($key2, "page_id"))
+                    {
+                        echo '<h5><a href="edit?field='.$key2.'&param='.$value2.'">'.$value2.'</a></h5>';                    
+                    }
+                    else
+                    {
+                        echo '<p class="masonry_field">'.$key2.'&nbsp;&nbsp;'.$value2.'</p>';
+                    }
+                }
+                ?>
+                <p><a href="?table_type=<?php echo $session->category;?>_contents">コンテンツリスト>>></a></p>
+                <p><a href="insert?table_type=<?php echo $session->category;?>_contents">新規コンテンツ作成>>></a></p>
+                <?php
+                echo '</div>';
+            }
+        }
+        else if($session->edit_target == 'contents')
+        {
+            foreach ($this->dataSource as $key => $value)
+            {
+                echo '<div class="masonry_box">';
+                foreach ($value as $key2=>$value2)
+                {
+                    if(strpos($key2, "contents_id"))
+                    {
+                            echo '<h5><a href="edit?field='.$key2.'&param='.$value2.'">'.$value2.'</a></h5>';
+                    }else{
+                            echo '<p class="masonry_field">'.$key2.'&nbsp;&nbsp;'.$value2.'</p>';
+                    }
+                }
+                echo '</div>';
+            }
+        }
+    }    
+?>
+</div>
+<?php
+if($session->edit_target == 'page'){
+?>
+    <div><input type='button' value='新規ページ作成' onclick='javascript:window.location.href="insert?table_type=<?php echo $session->category;?>_page"'></div>
+<?php
+}else if($session->edit_target == 'contents'){
+ ?>
+    <div><input type='button' value='新規コンテンツを作成' onclick='javascript:window.location.href="insert?table_type=<?php echo $session->category;?>_contents"'></div>
+<?php
+}
+?>
+    
+    

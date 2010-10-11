@@ -1,0 +1,63 @@
+/**全体の設定**/
+*{margin:0;padding:0;}
+html{height:100%;}
+/*html,body{height:100%;}*/
+body {color:#333333; font-size:13px; margin:0; padding:0 10px;}
+img{border:0px;}
+a{cursor:pointer;}
+fieldset{border:1px solid #add8e6;margin:10px 0;padding:10px;}
+legend{color:#434449;font-weight:bold}
+
+/*** クラス ***/
+.inner{padding:10px; overflow:hidden;}
+.small{font-size:10px;color:#888;}
+
+.note{color:#FF767B;font-weight:bold}
+.bold{color:#333;font-weight:bold}
+.errors{list-style:none;color:#FF767B;font-weight:bold;}
+.formarea{border:1px solid #6B90DA;}
+.ipAdrs{float:left; margin-right:10px;}
+.clear{clear:both;}
+
+.masonry_wrap{
+width: 880px;
+padding: 10px;
+background: #EEE;
+overflow: auto;
+}
+.masonry_wrap a{color:#ffffaa;}
+.masonry_box {
+width: 190px;
+margin: 5px;
+padding: 10px;
+float: left;
+background: #424242;
+color: #FFF;
+display: inline;  /* IE6 fix */
+}
+
+.masonry_box_edit {
+font-size:15px;
+font-weight:bold;
+width: 400px;
+margin: 5px;
+padding: 10px;
+float: left;
+background: #424242;
+color: #FFF;
+display: inline;  /* IE6 fix */
+}
+.masonry_box h5{
+color:#FFFFFF;
+float:left;
+font-size:30px;
+font-weight:bold;
+line-height:28px;
+margin-bottom:0;
+margin-right:4px;
+}
+///.masonry_field{
+    background:#979797;
+    border:solid 1px #222;
+    padding:1px;
+}///

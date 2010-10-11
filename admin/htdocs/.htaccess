@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule !\.(js|ico|gif|jpg|png|css)$ index.php
+php_value mbstring.language Japanese
+php_value mbstring.internal_encoding UTF-8
+php_flag  mbstring.encoding_translation Off
+
+

@@ -1,0 +1,6 @@
+2010-07-03T11:24:14+09:00 DEBUG (7):  class = AdminController : function = init : line = 123 : file = C:\xampp\php\ZendFramework\library\Zend\Controller\Action.php
+ : init
+2010-07-03T11:24:14+09:00 DEBUG (7):  class = AdminController : function = editAction : line = 503 : file = C:\xampp\php\ZendFramework\library\Zend\Controller\Action.php
+ : schedule_contents
+2010-07-03T11:24:14+09:00 DEBUG (7):  class = dbModel : function = __destruct : line = 503 : file = C:\xampp\php\ZendFramework\library\Zend\Controller\Action.php
+ : db->close処理

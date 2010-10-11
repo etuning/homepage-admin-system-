@@ -1,0 +1,56 @@
+edit
+<div class="masonry_wrap">
+<form action="confirm" method="post" enctype="MULTIPART/FORM-DATA">
+<?php
+    $session = new Zend_Session_Namespace('my_session');
+    echo "<div>edit status :: ".$session->edit_target."</div>";
+    if(is_array($this->record))
+    {
+        if($session->edit_target == 'page')
+        {
+            foreach ($this->record as $key => $value)
+            {
+                echo '<div class="masonry_box_edit">';
+                foreach ($value as $key2=>$value2)
+                {
+                    if(strpos($key2, "page_id"))
+                    {
+                        echo $key2.' '.$value2;
+                    }else{
+                    ?>
+                    <div><?php echo $key2;?></div><input type="text" name="<?php echo $key2;?>" value="<?php echo $value2;?>">
+                    <?php    
+                    }
+                }
+                echo '<div><input type="submit" value="UPDATE"></div></div>';
+            }
+        }
+        else if($session->edit_target == 'contents')
+        {
+            foreach ($this->record as $key => $value)
+            {
+                echo '<div class="masonry_box_edit">';
+                foreach ($value as $key2=>$value2)
+                {
+                    if(strpos($key2, "contents_id")===true)
+                    {
+                        echo $key2.' '.$value2;
+                    }
+                    else if($key2 === "img")
+                    {   
+                        echo '<div>'.$key2.'</div><div><input name="'.$key2.'" type="file" value="'.$value2.'" size="40"></div>';
+                    }
+                    else
+                    {?>
+                    <div><?php echo $key2;?></div><input type="text" name="<?php echo $key2 ?>" value="<?php echo $value2;?>">
+                    <?php
+                    }
+                }
+                echo '<div><input type="submit" value="UPDATE"></div></div>';
+            }
+        }
+    }
+
+?>
+</form>
+</div>            

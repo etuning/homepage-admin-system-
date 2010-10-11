@@ -1,0 +1,45 @@
+insert
+フィールドを取得して、フォームを表示
+<form action="confirm" method="post">
+        <?php
+            //echo var_dump($this->dataSource);
+            $session = new Zend_Session_Namespace('my_session');
+            if(is_array($this->dataSource))
+            {
+                foreach ($this->dataSource as $key => $value)
+                {
+                    if($key == 0){
+                    echo '<div class="masonry_box_edit">';
+                    foreach ($value as $key2=>$value2)
+                    {
+                        if(strpos($key2, "page_id"))
+                        {
+                            
+                        }else{
+                        ?>
+                        <div><?php echo $key2;?></div><input type="text" name="<?php echo $key2; ?>">
+                        <?php
+                        }
+                    }
+                    echo '<div><input type="submit" value="INSERT"></div></div>';
+                    }
+                }
+            }
+        ?>
+</form>
+<script type="text/javascript">
+    <!--
+
+function dialog(){
+
+	// 「OK」時の処理開始 ＋ 確認ダイアログの表示
+	if(window.confirm('この内容で登録します')){
+		location.href = "confirm"; // example_confirm.html へジャンプ
+	}else{
+	}
+	// 「キャンセル」時の処理終了
+
+}
+
+// -->
+</script>

@@ -1,0 +1,14 @@
+<ul>
+    <?php $category = array("schedule","message","otherelse");
+    foreach ($category as $category_name){            
+    ?>
+    <li>
+    <?php echo $category_name;?>
+        <ul>
+            <li><a href="<?php $this->basePath; ?>admin/list?table_type=<?php echo $category_name;?>_page">一覧</a></li>
+            <li><a href="<?php $this->basePath; ?>admin/insert?table_type=<?php echo $category_name;?>_page">新規ページ</a></li>
+        </ul>
+    </li>
+    <?php } ?>
+    <li><a href="<?php $this->basePath; ?>admin/layout">レイアウトマスタ</a></li>
+</ul>

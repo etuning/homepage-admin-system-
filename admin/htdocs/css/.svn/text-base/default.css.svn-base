@@ -1,0 +1,89 @@
+/**全体の設定**/
+*{margin:0;padding:0;}
+html{background-color:white;background-image:url(../image/back.png);background-position:center center;background-repeat:repeat-y;height:100%;}
+/*html,body{height:100%;}*/
+body {color:#333333; font-size:13px; margin:0; padding:0 10px;}
+img{border:0px;}
+a{cursor:pointer;}
+fieldset{border:1px solid #add8e6;margin:10px 0;padding:10px;}
+legend{color:#434449;font-weight:bold}
+
+/*** クラス ***/
+.inner{padding:10px; overflow:hidden;}
+.small{font-size:10px;color:#888;}
+
+.note{color:#FF767B;font-weight:bold}
+.bold{color:#333;font-weight:bold}
+.errors{list-style:none;color:#FF767B;font-weight:bold;}
+.formarea{border:1px solid #6B90DA;}
+.ipAdrs{float:left; margin-right:10px;}
+.clear{clear:both;}
+
+div .spacer{clear:both;font-size:1px;line-height:1px;}
+/**設定入力画面　必須項目**/
+.required_tag{margin-top:10px;color:#f55;font-weight:bold;display:block;font-size:11px;}
+.description{color:#666;font-weight:bold;}
+/** divider headerとfotterの区切り線**/
+div .divider{background-image:url("../image/navi_horizontal_bar.png"); background-repeat: no-repeat; background-attachment:scroll; background-position:top center; clear:both; height:1px; overflow:hidden; padding-top:12px;width:100%; }
+div .divider_bottom{margin-top:12px;}
+
+/** page エリア header **/
+#page{width:800px;height:100%; background-color:#FFFFFF;margin:0 auto;text-align:left;border-bottom:1px solid #667788;border-left:1px solid #667788;border-right:1px solid #667788;}
+#page #header_spacer{height:64px}
+#page #header{width:100%;position:relative;}
+#page #header .inner{background-image:url(../image/header_installer.png);background-repeat:no-repeat;background-position:center;height:100px;}
+
+/** page エリア central **/
+#page #central{_height:500px;}
+#page #central{min-height:460px;}
+#page #central{width:100%; background-image:url(../image/navi_sidebar_bg.png); background-repeat:repeat-y;background-position:center;}
+/** page  side navi **/
+#page #central #side_bar{ float:left;width:230px;}
+#page #central #side_bar .inner .menu_flow{list-style:none;font-size:14px;font-weight:bold;letter-spacing:3px;color:#423f3f;}
+#page #central #side_bar .inner .menu_flow li{width:180px;height:32px;margin:20px;margin-right:0px;padding-left:23px;padding-top:8px;}
+#page #central #side_bar .inner .menu_flow .on{background-image:url("../image/flow_on.png");background-repeat:no-repeat;}
+#page #central #side_bar .inner .menu_flow .off{background-image:url("../image/flow_off.png");background-repeat:no-repeat;}
+#page #central #side_bar .inner .menu_flow .point{background-image:url("../image/flow_point.png");background-repeat:no-repeat;
+        margin-top:-20px;margin-bottom:-20px;}
+/** page エリア central contentエリア**/
+#page #central #content{ float:left;width:550px;}
+#page #central #content .inner{}
+#page #central #content #title{width:340px;padding-left:20px;font-size:25px;font-weight:bold;margin:0 auto;}
+#page #central #content .desc{width:400px;font-size:13px;margin:10px auto;text-indent:10px;line-height:20px;letter-spacing:1px;}
+#page #central #content .index_height{height:480px;}
+#page #central #content #document{width:469px;padding:10px;margin:0 auto 10px;}
+#page #central #content #document fieldset{padding:20px 10px;}
+#page #central #content #document fieldset .subtitle{display:block;margin-bottom:5px;margin-top:10px;font-size:12px;color:#666;}
+#page #central #content #document fieldset .search_contents{display:block;padding-left:20px;}
+/**OS 環境チェック**/
+.env_title{width:110px;}
+.env_state{padding-left:5px;font-weight:bold;}
+/**php module check**/
+.true{color:#2e8b57;font-weight:bold}
+.alert{color:#ffa500;font-weight:bold}
+.emerg{color:#FF767B;font-weight:bold}
+.module_name{}
+.module_state{}
+/**end**/
+#page #central #content #formarea{width:420px;text-align:center;}
+#page #cnetral #content #formarea #submit{}
+#page #central #content #isagree_area{width:200px;margin:10px auto 0;}
+#page #central #content #submit_area{width:150px;margin:10px auto 0;text-align:center}
+#page #central #content #form_setconfig{width:510px;margin:10px auto;}
+
+/**rulebox**/
+#page #central #content p.rulebox { height:360px; width:470px; overflow:scroll; border: gray 1px solid;  margin: auto;padding:10px;}
+#page #central #content p.rulebox .licence_title{display:block;font-weight:bold;font-size:14px;text-align:center;padding-bottom:10px;}
+#page #central #content p.rulebox .licence_subtitle{display:block;margin:10px auto;font-weight:bold;}
+#page #central #content p.rulebox .licence_desc{display:block;padding-left:10px;line-height:17px;letter-spacing:1px;}
+/**zend_form**/
+#page #central #content fieldset dt{margin:10px;margin-top:2px;}
+#page #central #content fieldset dt .required{font-size:12px;}
+#page #central #content fieldset dt .optional{font-size:12px;}
+#page #central #content fieldset dd{padding-bottom:5px;padding-left:10px;border-bottom:1px solid #ccc;margin-bottom:10px;}
+#page #central #content fieldset .bottom{border-bottom:none;}
+
+/** page エリア footer **/
+#page #footer{clear:both; height:116px; width:100%; background-image:url(../image/footer_installer_bg.png); background-repeat:no-repeat;}
+#page #footer .inner{}
+#page #footer #netcitys_logo{height:45px;width:130px;float:right;background-image:url(../image/netcitys_logo.png);background-repeat:no-repeat;background-position:right;}
